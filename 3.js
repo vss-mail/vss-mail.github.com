@@ -90,7 +90,7 @@ this.changeStyle = function(oEvent){
     var i,
 		NewTex,
 		tsp;
-		alert(tasks1.length);
+	//	alert(tasks1.length);
 	//	alert(tasks1.length);
 		if(oEvent.target.checked===true){
 		oEvent.target.parentNode.id = "st1";
@@ -134,7 +134,7 @@ this.changeStyle = function(oEvent){
 this.show = function(){
 		var i;
 		
-		alert(_mas.length);
+	//	alert(_mas.length);
 		
 		for(i = 0; i < _mas.length; i+=1){
 			this.insertNewNode(i); 
@@ -186,6 +186,9 @@ this.insertNewNode = function( i ){ // -1 если вызов идет из обработчика текстбо
 				new_checkbox = document.createElement("input");
 				new_checkbox.type = "checkbox";			
 				new_checkbox.onclick =this.changeStyle;
+				
+				new_checkbox.checked = _mas[i].ch;
+				
 				new_span.appendChild(new_checkbox);			
 				
 				
