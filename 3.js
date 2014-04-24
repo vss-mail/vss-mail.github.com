@@ -1,13 +1,13 @@
-function  myTaskList() // singletone
+п»їfunction  myTaskList() // singletone
 {
 var iam,    //instance of object
-	tasks1, // массив строк, который преобразуется в массив TElement
-	_tablet,// сслыка на элемент <TABLE>
-	_ppSum, // ссылка на строку с суммой
-	_bDel,  // кнопка удалить	
-	_actTasks, // сумма задач актуальных
-	_mas={}, // массив пользовательского типа данных
-	_tex;   // ссылка на текстбокс
+	tasks1, // РјР°СЃСЃРёРІ СЃС‚СЂРѕРє, РєРѕС‚РѕСЂС‹Р№ РїСЂРµРѕР±СЂР°Р·СѓРµС‚СЃСЏ РІ РјР°СЃСЃРёРІ TElement
+	_tablet,// СЃСЃР»С‹РєР° РЅР° СЌР»РµРјРµРЅС‚ <TABLE>
+	_ppSum, // СЃСЃС‹Р»РєР° РЅР° СЃС‚СЂРѕРєСѓ СЃ СЃСѓРјРјРѕР№
+	_bDel,  // РєРЅРѕРїРєР° СѓРґР°Р»РёС‚СЊ	
+	_actTasks, // СЃСѓРјРјР° Р·Р°РґР°С‡ Р°РєС‚СѓР°Р»СЊРЅС‹С…
+	_mas={}, // РјР°СЃСЃРёРІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ С‚РёРїР° РґР°РЅРЅС‹С…
+	_tex;   // СЃСЃС‹Р»РєР° РЅР° С‚РµРєСЃС‚Р±РѕРєСЃ
 	
 
 	
@@ -48,12 +48,12 @@ this.prepare = function()
 			_bDel = document.createElement("input");
 			_bDel.type = "button";
 			_bDel.id = "delButton";
-			_bDel.value = "Убрать сделанные";
+			_bDel.value = "РЈР±СЂР°С‚СЊ СЃРґРµР»Р°РЅРЅС‹Рµ";
 			_bDel.onclick = this.delCompleteTasks;
 			body.appendChild(_bDel);
 			_actTasks = 0;
 }
-// удаление сделанных задач
+// СѓРґР°Р»РµРЅРёРµ СЃРґРµР»Р°РЅРЅС‹С… Р·Р°РґР°С‡
 this.delCompleteTasks = function(){
 	var i,j,
 		secondLevel;
@@ -67,7 +67,7 @@ this.delCompleteTasks = function(){
 			tasks1.splice(j,1);
 			_mas.splice(j,1);
 			
-			localStorage.foo = JSON.stringify(_mas); // сохранили локал стораж
+			localStorage.foo = JSON.stringify(_mas); // СЃРѕС…СЂР°РЅРёР»Рё Р»РѕРєР°Р» СЃС‚РѕСЂР°Р¶
 			j=j-1;
 		}
 		
@@ -113,7 +113,7 @@ this.changeStyle = function(oEvent){
 			oEvent.target.parentNode.id = "st2";
 		}
 		
-					localStorage.foo = JSON.stringify(_mas); // сохранили локал стораж
+					localStorage.foo = JSON.stringify(_mas); // СЃРѕС…СЂР°РЅРёР»Рё Р»РѕРєР°Р» СЃС‚РѕСЂР°Р¶
 		
 					NewTex = document.createElement("p");				
 					NewTex.appendChild(document.createTextNode("vsego zadach = " + _actTasks));				
@@ -121,7 +121,7 @@ this.changeStyle = function(oEvent){
 					_ppSum = NewTex;				
 
 /* 	for( i = 0; i < tasks1.length; i+=1){		
-		tsp = tasks1[i].parentNode;		// массив дивов - парент Табля
+		tsp = tasks1[i].parentNode;		// РјР°СЃСЃРёРІ РґРёРІРѕРІ - РїР°СЂРµРЅС‚ РўР°Р±Р»СЏ
 		if(tasks1[i].checked ===true){		
 			tsp.id = "st1";
 		}
@@ -140,7 +140,7 @@ this.show = function(){
 			this.insertNewNode(i); 
 			}
 
-		//_actTasks = tasks1.length; // криво
+		//_actTasks = tasks1.length; // РєСЂРёРІРѕ
 		_ppSum.appendChild(document.createTextNode("vsego zadach = "+ _actTasks));
 
 }
@@ -155,12 +155,12 @@ this.addNew = function(s)
 		localStorage.foo = JSON.stringify(_mas);
 	}
 
-this.insertNewNode = function( i ){ // -1 если вызов идет из обработчика текстбокса
+this.insertNewNode = function( i ){ // -1 РµСЃР»Рё РІС‹Р·РѕРІ РёРґРµС‚ РёР· РѕР±СЂР°Р±РѕС‚С‡РёРєР° С‚РµРєСЃС‚Р±РѕРєСЃР°
 	 var new_checkbox,
 		 new_span,
 		 new_tr,
 		 NewTex,
-		 v = {}, // переменная пользовательского типа содержит строку и признак чекед
+		 v = {}, // РїРµСЂРµРјРµРЅРЅР°СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ С‚РёРїР° СЃРѕРґРµСЂР¶РёС‚ СЃС‚СЂРѕРєСѓ Рё РїСЂРёР·РЅР°Рє С‡РµРєРµРґ
 		 index_of_mass;
 		 
 		 index_of_mass = i;
@@ -197,7 +197,7 @@ this.insertNewNode = function( i ){ // -1 если вызов идет из обработчика текстбо
 				
 				
 				_tablet.appendChild(new_span);
-				// сохраняем в массиве
+				// СЃРѕС…СЂР°РЅСЏРµРј РІ РјР°СЃСЃРёРІРµ
 				
 
 				localStorage.foo = JSON.stringify(_mas);	
@@ -211,7 +211,7 @@ this.insertNewNode = function( i ){ // -1 если вызов идет из обработчика текстбо
 				
 				if (index_of_mass < 0){
 					NewTex = document.createElement("p");				
-					NewTex.appendChild(document.createTextNode("Всего задач = " + _actTasks));				
+					NewTex.appendChild(document.createTextNode("Р’СЃРµРіРѕ Р·Р°РґР°С‡ = " + _actTasks));				
 					_ppSum.parentNode.replaceChild(NewTex,_ppSum);
 					_ppSum = NewTex;				
 				}
@@ -244,7 +244,7 @@ this.getIns = function(){
  temptl.show();
  
  //var t2 = new myTaskList;
- //if (temptl ===t2){alert("Равны");}else{alert("Не равно");}
+ //if (temptl ===t2){alert("Р Р°РІРЅС‹");}else{alert("РќРµ СЂР°РІРЅРѕ");}
  
  
  
