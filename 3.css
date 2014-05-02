@@ -1,13 +1,7 @@
 <style>
-h1{
-font-weight: bold; 
-font-size: 14pt;
-}
-body{
-position:absolute;
 
-top:100px;
-left:400px;
+body{
+/*position:absolute;*/
 
 }
 p{
@@ -22,6 +16,49 @@ color:red;
 #st2{
 text-decoration:none;
 font-size: 12pt;
+}
+#dRoller{
+	border: 1px solid black;
+	text-align:center;
+
 
 }
+
+#dCI{
+			border: 1px solid red;
+			padding-left: 10px;
+			padding-top: 10px;
+			padding-bottom: 30px;
+			padding-right: 10px;
+			text-align:center;
+			height: 60%;
+}
+#curImage{
+height: 100%;
+}
+.imgCommon{
+padding: 2px 2px 2px 5px;
+height: 100px;
+}
+
+.noneVisImg{
+display: none
+}
+
+
+.selectedPic{
+	border: 2px solid red;
+}
+
+
+
+#logo{
+font-weight: bold; 
+font-size: 54pt;
+text-align: center;
+border: 1px solid black;
+}
 </style>
+
+
+
