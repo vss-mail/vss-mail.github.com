@@ -91,7 +91,7 @@ this.getInst = function(args){
 			iam = this;			
 			paramSet = args[0];	
 			if (paramSet.NumberInScroll>privMass.length){paramSet.NumberInScroll = privMass.length; canScrolled =0}; 
-			$('<div></div>',{id: 'dCI'}).appendTo(paramSet.papa); // 
+			$('<div></div>',{id: 'dCI'}).addClass('dCenterImg').appendTo(paramSet.papa); // 
 			$('<img>',{	src: privMass[0],id:'curImage'}).appendTo($('#dCI'));
 			
 			$('<div></div>',{id: 'dRoller'}).appendTo(paramSet.papa);
