@@ -2,6 +2,15 @@
 
 
 
+
+
+
+
+#logo{
+font-weight: bold; 
+font-size: 54pt;
+text-align: center;
+}
 #dCI{
 			
 			padding-left: 10px;
@@ -11,7 +20,9 @@
 			text-align:center;
 			height: 60%;
 }
-
+#dRoller{	
+	text-align:center;
+}
 #curImage{
 height: 100%;
 }
@@ -30,15 +41,6 @@ display: none
 	border: 2px solid red;
 }
 
-
-#logo{
-font-weight: bold; 
-font-size: 54pt;
-text-align: center;
-}
-#dRoller{	
-	text-align:center;
-}
 </style>
 
 
