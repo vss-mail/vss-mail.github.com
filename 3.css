@@ -1,4 +1,4 @@
-<style>
+﻿<style>
 
 body{
 /*position:absolute;*/
@@ -20,8 +20,6 @@ font-size: 12pt;
 #dRoller{
 	border: 1px solid black;
 	text-align:center;
-
-
 }
 
 #dCI{
@@ -33,9 +31,11 @@ font-size: 12pt;
 			text-align:center;
 			height: 60%;
 }
+
 #curImage{
 height: 100%;
 }
+
 .imgCommon{
 padding: 2px 2px 2px 5px;
 height: 100px;
