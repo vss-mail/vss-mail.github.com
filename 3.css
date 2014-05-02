@@ -1,8 +1,6 @@
 ﻿<style>
 
-#dRoller{	
-	text-align:center;
-}
+
 
 #dCI{
 			
@@ -37,6 +35,9 @@ display: none
 font-weight: bold; 
 font-size: 54pt;
 text-align: center;
+}
+#dRoller{	
+	text-align:center;
 }
 </style>
 
