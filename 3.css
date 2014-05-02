@@ -17,13 +17,12 @@ color:red;
 text-decoration:none;
 font-size: 12pt;
 }
-#dRoller{
-	border: 1px solid black;
+#dRoller{	
 	text-align:center;
 }
 
 #dCI{
-			border: 1px solid red;
+			
 			padding-left: 10px;
 			padding-top: 10px;
 			padding-bottom: 30px;
@@ -56,7 +55,7 @@ display: none
 font-weight: bold; 
 font-size: 54pt;
 text-align: center;
-border: 1px solid black;
+
 }
 </style>
 
