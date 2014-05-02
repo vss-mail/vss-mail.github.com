@@ -141,4 +141,4 @@ el = document.getElementById("firstGal"),
 ps = {},
 b;
 ps.papa = el; ps.NumberInScroll = 3;
-b = new myGallery(ps,["img/1.jpg","img/2.jpg","img/3.jpg", "img/4.jpg"]);
+b = new myGallery(ps,["img/1.jpg","img/2.jpg","img/3.JPG", "img/4.JPG"]);
