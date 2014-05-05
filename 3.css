@@ -4,27 +4,34 @@
 text-align:center;
 }
 
-#dCI{
-			
-			padding-left: 10px;
-			padding-top: 10px;
-			padding-bottom: 30px;
-			padding-right: 10px;
-			text-align:center;
-		/*	height: 60%;*/
+#myContainer{
+	display: inline-block;
+	padding: 5px;
+	text-align: center;
+}
+
+#dCI{ 
+		display:inherit;
+		padding: inherit;
+		text-align:inherit;
 }
 
 #dRoller{	
-	text-align:center;
+		display: inline-block;
+		/* padding: inherit; */
+		/* text-align:inherit; */
 }
 
-#curImage{
-   height: 400px;
+#spRoller{
+		display:inherit;
 }
+
 
 .imgCommon{
-padding: 2px 2px 2px 5px;
-height: 100px;
+		display:inherit;
+		border: 1px solid white;
+		padding: 2px;
+		/* height: 100px; */
 }
 
 .noneVisImg{
@@ -32,7 +39,11 @@ display: none
 }
 
 .selectedPic{
-	border: 2px solid red;
+	border: 1px solid red;
+}
+
+.itCanScrolled{
+cursor: pointer;
 }
 
 </style>
